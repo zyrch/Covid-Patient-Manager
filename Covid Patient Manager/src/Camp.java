@@ -32,7 +32,7 @@ public class Camp {
     public ArrayList<Patient> secondCriteria(int maxTemperature) {
         ArrayList<Patient> canAdd2 = new ArrayList<>();
         for (Patient patient : patients) {
-            if (patient.isAdmitted() || patient.getTemperature() > maxTemperature) {
+            if (patient.isAdmitted() || patient.getTemperature() <= maxTemperature) {
                 continue;
             }
             canAdd2.add(patient);
